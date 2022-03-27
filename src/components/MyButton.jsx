@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Time from "./Time";
 
 class MyButton extends Component {
     constructor(props) {
@@ -18,10 +19,12 @@ class MyButton extends Component {
     render() {
         const { state } = this;
         return (
-                // <button onClick={this.handleClick}>{state.isOn ? 'Desligar' : 'Ligar'}</button>
-                <button onClick={(event) => {
-                    this.handleClick(123)
-                }}>{state.isOn ? 'Desligar' : 'Ligar'}</button>
+                <div>
+                    <button onClick={(event) => {
+                        this.handleClick(123)
+                    }}>{state.isOn ? 'Desligar' : 'Ligar'}</button>
+                    {state.isOn ? <Time /> : 'OFF'}
+                </div>
         )
     }
 }
