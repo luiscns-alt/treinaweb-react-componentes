@@ -1,4 +1,5 @@
 import MeuComponent from "./components/component";
+import Time from "./components/Time";
 
 function App() {
     const dados = {
@@ -8,6 +9,7 @@ function App() {
     }
     return (
             <div className="App">
+                <Time  />
                 <MeuComponent {...dados} />
             </div>
     )
