@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 
 class MyButton extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOn: true
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-    sayHello(event) {
-        event.preventDefault();
-        alert('Hello!');
+    handleClick() {
+        this.setState((state, props) => {
+            return { isOn: !state.isOn };
+        })
     }
 
     render() {
+        const { state } = this;
         return (
-                <button onClick={this.sayHello}>Click Me</button>
+                <button onClick={this.handleClick}>{state.isOn ? 'Desligar' : 'Ligar'}</button>
         )
     }
 }
-
 
 /*function MyButton(props){
     function sayHello(){
