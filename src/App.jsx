@@ -1,11 +1,13 @@
 import ClickList from "./components/ClickList";
+import ClickListItem from "./components/ClickListItem";
 
 function App() {
     return (
             <div className="App">
-                <ClickList number={123}>
-                    <h1>Title</h1>
-                    <div>Ola web developers!</div>
+                <ClickList>
+                    <ClickListItem></ClickListItem>
+                    <ClickListItem></ClickListItem>
+                    <ClickListItem></ClickListItem>
                 </ClickList>
             </div>
     )
