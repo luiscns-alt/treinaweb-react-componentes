@@ -33,8 +33,8 @@ class App extends Component {
                 <div className="App">
                     <div>
                         <ul>
-                            <li ref={this.item1}></li>
-                            <li ref={this.item2}></li>
+                            <li ref={this.item1} />
+                            <li ref={this.item2} />
                         </ul>
                         <Time container={this.state.selectedItem.current} />
                         <button onClick={this.toggleItem}>Toggle</button>
@@ -42,9 +42,9 @@ class App extends Component {
 
                     <MyVideo src="https://app.coverr.co/s3/mp4/Albert-Dock.mp4" />
                     <ClickList>
-                        <ClickListItem></ClickListItem>
-                        <ClickListItem></ClickListItem>
-                        <ClickListItem></ClickListItem>
+                        <ClickListItem />
+                        <ClickListItem />
+                        <ClickListItem />
                     </ClickList>
                 </div>
         );
