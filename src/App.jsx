@@ -1,9 +1,12 @@
-import PeopleList from "./components/PeopleList";
+import ClickList from "./components/ClickList";
 
 function App() {
     return (
             <div className="App">
-                <PeopleList />
+                <ClickList>
+                    <h1>Title</h1>
+                    <div>Ola web developers!</div>
+                </ClickList>
             </div>
     )
 }
