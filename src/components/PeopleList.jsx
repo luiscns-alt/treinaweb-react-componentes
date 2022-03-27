@@ -9,17 +9,9 @@ const myList = [
 
 class PeopleList extends Component {
     render() {
-        const elementsList = [];
-
-        for (let i = 0; i < myList.length; i++) {
-            elementsList.push(
-                    <li>{myList[i].nome} - {myList[i].idade} anos</li>
-            )
-        }
-
         return (
                 <ul>
-                    {elementsList}
+                    {myList.map(person => <li key={person.nome}>{person.nome} - {person.idade} anos</li>)}
                 </ul>
         );
     }
