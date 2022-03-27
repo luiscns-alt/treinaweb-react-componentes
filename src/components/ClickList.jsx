@@ -26,9 +26,11 @@ class ClickList extends Component {
                     Total: {state.total}
                     <ul>
                         {this.props.children.map((item, index) => {
-                            return <item.type index={index} handleClick={this.setTotal}>
-                                {item.props.children}
-                            </item.type>
+                            return (
+                                    <item.type index={index} handleClick={this.setTotal}>
+                                        {item.props.children}
+                                    </item.type>
+                            )
                         })}
                     </ul>
                 </div>
