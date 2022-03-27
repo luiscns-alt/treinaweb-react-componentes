@@ -5,6 +5,7 @@ import ClickList from './components/ClickList';
 import ClickListItem from './components/ClickListItem';
 import MyVideo from './components/MyVideo';
 import Time from './components/Time'
+import { MyContext } from "./services/MyContext";
 
 class App extends Component {
 
@@ -14,7 +15,8 @@ class App extends Component {
         this.item2 = React.createRef();
 
         this.state = {
-            selectedItem: this.item1
+            selectedItem: this.item1,
+            username: 'Luis Carlos'
         }
 
         this.toggleItem = this.toggleItem.bind(this);
@@ -40,12 +42,14 @@ class App extends Component {
                         <button onClick={this.toggleItem}>Toggle</button>
                     </div>
 
-                    <MyVideo src="https://app.coverr.co/s3/mp4/Albert-Dock.mp4" />
-                    <ClickList>
-                        <ClickListItem />
-                        <ClickListItem />
-                        <ClickListItem />
-                    </ClickList>
+                    <MyContext.Provider value={this.state} >
+                        <MyVideo src="https://app.coverr.co/s3/mp4/Albert-Dock.mp4" />
+                        <ClickList>
+                            <ClickListItem></ClickListItem>
+                            <ClickListItem></ClickListItem>
+                            <ClickListItem></ClickListItem>
+                        </ClickList>
+                    </MyContext.Provider>
                 </div>
         );
     }
