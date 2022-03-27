@@ -1,13 +1,14 @@
-import MeuComponent, { MeusComponent } from "./components/component";
+import MeuComponent from "./components/component";
 
 function App() {
-    const nome = 'Title';
-    const Title = MeusComponent[nome];
+    const dados = {
+        nome: "Maria",
+        sobrenome: "Souza",
+        idade: 20
+    }
     return (
             <div className="App">
-                <MeuComponent nome={'Luis Carlos'} />
-                <MeusComponent.Title />
-                <Title nome={'Luis'} />
+                <MeuComponent {...dados} />
             </div>
     )
 }
