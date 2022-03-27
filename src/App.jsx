@@ -5,9 +5,9 @@ function App() {
     const Title = MeusComponent[nome];
     return (
             <div className="App">
-                <MeuComponent />
+                <MeuComponent nome={'Luis Carlos'} />
                 <MeusComponent.Title />
-                <Title />
+                <Title nome={'Luis'} />
             </div>
     )
 }

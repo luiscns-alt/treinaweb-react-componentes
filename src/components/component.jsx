@@ -12,14 +12,15 @@ import React from 'react';
 // Com Classe
 class MeuComponent extends React.Component {
     render() {
-        return <h1>Title</h1>;
+        const { props } = this;
+        return <h1>{props.nome}</h1>;
     }
 }
 
 // Objetos
 export const MeusComponent = {
-    Title: function () {
-        return <h1>Ola Mundo!</h1>
+    Title: function (props) {
+        return <h1>{props.nome}</h1>
     }
 }
 
